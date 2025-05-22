@@ -1,0 +1,82 @@
+---
+---
+<header id="header" class="absolute top-8 left-1/2 -translate-x-1/2 w-[80vw] bg-gradient-to-br from-white/70 to-accent/90 backdrop-blur-md text-primary z-30 transition-all duration-300 rounded-lg shadow-md border border-accent/20 scale-100">
+    <nav class="container mx-auto px-10 py-8 flex justify-between items-center">
+      <a href="/" class="text-2xl font-extrabold text-primary/90">Carolina Coast IT</a>
+      <div class="md:hidden">
+        <button id="menu-toggle" class="bg-primary text-accent px-4 py-2 rounded-lg focus:outline-none">
+          <svg class="h-7 w-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        </button>
+      </div>
+      <div id="menu" class="hidden md:flex md:items-center md:space-x-10">
+        <a href="/" class="bg-primary text-accent px-5 py-2.5 rounded-lg hover:bg-primary/80 hover:scale-105 hover:shadow-sm transition-all duration-200">Home</a>
+        <a href="/about" class="bg-primary text-accent px-5 py-2.5 rounded-lg hover:bg-primary/80 hover:scale-105 hover:shadow-sm transition-all duration-200">About</a>
+        <a href="/services" class="bg-primary text-accent px-5 py-2.5 rounded-lg hover:bg-primary/80 hover:scale-105 hover:shadow-sm transition-all duration-200">Services</a>
+        <a href="/contact" class="bg-primary text-accent px-5 py-2.5 rounded-lg hover:bg-primary/80 hover:scale-105 hover:shadow-sm transition-all duration-200">Contact</a>
+      </div>
+    </nav>
+  </header>
+  
+  <script>
+    const header = document.getElementById('header');
+    const mainContent = document.getElementById('main-content');
+    const menuToggle = document.getElementById('menu-toggle');
+    const menu = document.getElementById('menu');
+  
+    // Dynamically set padding-top for main content based on header state
+    if (header && mainContent) {
+      const headerOffset = 32; // top-8 = 32px (assuming 1rem = 16px)
+  
+      const setMainPadding = () => {
+        const headerHeight = header.offsetHeight;
+        const isSticky = header.classList.contains('sticky');
+        if (isSticky) {
+          // When docked, only account for the header's height
+          mainContent.style.paddingTop = `${headerHeight}px`;
+        } else {
+          // When undocked, account for the header's height plus its offset from the top
+          mainContent.style.paddingTop = `${headerHeight + headerOffset}px`;
+        }
+      };
+  
+      // Set initial padding
+      setMainPadding();
+  
+      // Update padding on resize and scroll
+      window.addEventListener('resize', setMainPadding);
+  
+      // Toggle sticky header on scroll
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > header.offsetHeight) {
+          header.classList.add('sticky', 'top-0', 'w-full', 'scale-105');
+          header.classList.remove('absolute', 'top-8', 'left-1/2', '-translate-x-1/2', 'w-[80vw]', 'scale-100');
+        } else {
+          header.classList.remove('sticky', 'top-0', 'w-full', 'scale-105');
+          header.classList.add('absolute', 'top-8', 'left-1/2', '-translate-x-1/2', 'w-[80vw]', 'scale-100');
+        }
+        // Recalculate padding after state change
+        setMainPadding();
+      });
+    }
+  
+    // Toggle mobile menu
+    if (menuToggle && menu) {
+      menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+        menu.classList.toggle('flex');
+        menu.classList.toggle('flex-col');
+        menu.classList.toggle('absolute');
+        menu.classList.toggle('top-16');
+        menu.classList.toggle('left-0');
+        menu.classList.toggle('right-0');
+        menu.classList.toggle('bg-gradient-to-br');
+        menu.classList.toggle('from-white/70');
+        menu.classList.toggle('to-accent/90');
+        menu.classList.toggle('backdrop-blur-md');
+        menu.classList.toggle('p-4');
+        menu.classList.toggle('space-y-3');
+      });
+    }
+  </script>

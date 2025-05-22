@@ -1,0 +1,25 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+---
+<MainLayout title="Projects">
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl font-bold text-primary mb-8 text-center">Our Projects</h1>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <ProjectCard
+          title="Project Placeholder 1"
+          description="A future case study or demo site will be showcased here."
+        />
+        <ProjectCard
+          title="Project Placeholder 2"
+          description="A future case study or demo site will be showcased here."
+        />
+        <ProjectCard
+          title="Project Placeholder 3"
+          description="A future case study or demo site will be showcased here."
+        />
+      </div>
+    </div>
+  </section>
+</MainLayout>
