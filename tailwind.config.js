@@ -1,18 +1,20 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+export default {
+  content: [
+    './src/**/*.{astro,html,js,jsx,md,mdx,ts,tsx}',
+  ],
   theme: {
     extend: {
       colors: {
         primary: '#1B263B',
-        secondary: '#00ADB5',
-        darkSecondary: '#007A82',
-        accent: '#E0E1DD',
         gradientEnd: '#415A77',
-        warmAccent: '#F4A261',
-        darkWarmAccent: '#D97706', 
+        secondary: '#2EC4B6',
+        accent: '#F4A261',
+        warmAccent: '#E76F51',
+        darkSecondary: '#1D3557',
+        darkWarmAccent: '#D98A3F',
       },
     },
   },
   plugins: [],
-};
+}
