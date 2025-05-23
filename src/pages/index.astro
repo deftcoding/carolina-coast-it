@@ -6,11 +6,11 @@ import MainLayout from '../layouts/MainLayout.astro';
   <!-- Hero Content -->
   <div class="min-h-screen flex items-center justify-center">
     <div class="container mx-auto px-4 text-center">
-      <h1 class="text-5xl md:text-7xl font-extrabold text-white mb-4 leading-tight text-shadow">
+      <h1 class="text-5xl md:text-7xl pt-24 font-extrabold text-white mb-4 leading-tight text-shadow">
         Hand Coded Custom Designs
       </h1>
-      <p class="text-xl md:text-2xl text-sandyBeige mb-8 max-w-3xl mx-auto leading-relaxed text-shadow">
-        No page builders or WordPress. We offer 100% hand-coded websites that impress with superior results starting at $100/mo.
+      <p class="text-xl md:text-2xl font-bold text-white mb-8 max-w-3xl mx-auto leading-relaxed text-shadow">
+        Local people need local help. We offer on-site IT services and 100% hand-coded websites that impress with superior results.
       </p>
       <div class="mt-4 flex justify-center">
         <div class="max-w-xs md:max-w-sm">
@@ -20,13 +20,11 @@ import MainLayout from '../layouts/MainLayout.astro';
       <div class="mt-8 flex justify-center space-x-4">
         <a
           href="mailto:chris@carolinacoastit.com"
-          class="cta-button inline-block bg-seafoam text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-coral hover:shadow-lg transition-all duration-300"
+          class="cta-button inline-block bg-[#005069] text-white font-bold px-8 py-4 rounded-lg text-lg hover:bg-[#006f8a] hover:shadow-lg transition-all duration-300"
         >
           Get Started
         </a>
-        <a href="/about" class="inline-block text-sandyBeige hover:underline mt-4 text-lg text-shadow">
-          About Us
-        </a>
+        
       </div>
     </div>
   </div>
@@ -36,7 +34,7 @@ import MainLayout from '../layouts/MainLayout.astro';
     <div class="container mx-auto px-4">
       <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-16 text-center text-shadow">Our Services</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="text-center p-8 rounded-lg bg-white shadow-lg border border-seafoam/50 transition transform hover:scale-105 hover:shadow-xl flex flex-col">
+        <div class="text-center p-8 rounded-lg bg-gradient-to-br from-white/70 to-sandyBeige/90 backdrop-blur-md shadow-lg border transition transform hover:scale-105 hover:shadow-xl flex flex-col">
           <svg class="h-12 w-12 mx-auto mb-4 text-coral" fill="currentColor" viewBox="0 0 24 24">
             <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
           </svg>
@@ -45,31 +43,31 @@ import MainLayout from '../layouts/MainLayout.astro';
             Custom, responsive websites designed with a mobile-first approach to meet your business needs.
           </p>
           <div class="mt-auto">
-            <a href="#" class="inline-block text-seafoam hover:underline text-lg font-semibold">Learn More</a>
+            <a href="#" class="inline-block text-[#005069] hover:underline text-lg font-semibold">Learn More</a>
           </div>
         </div>
-        <div class="text-center p-8 rounded-lg bg-white shadow-lg border border-seafoam/50 transition transform hover:scale-105 hover:shadow-xl flex flex-col">
+        <div class="text-center p-8 rounded-lg bg-gradient-to-br from-white/70 to-sandyBeige/90 backdrop-blur-md shadow-lg border transition transform hover:scale-105 hover:shadow-xl flex flex-col">
           <svg class="h-12 w-12 mx-auto mb-4 text-coral" fill="currentColor" viewBox="0 0 24 24">
             <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
           </svg>
           <h3 class="text-2xl font-semibold text-oceanDeep mb-6">SEO Optimization</h3>
           <p class="text-base text-gray-800 leading-relaxed mb-4 min-h-[100px]">
-            In-house SEO optimization to enhance your local online visibility for small businesses and residents, never outsourced.
+            In-house SEO optimization to enhance your local online visibility for small businesses and residents, never outsourced abroad.
           </p>
           <div class="mt-auto">
-            <a href="#" class="inline-block text-seafoam hover:underline text-lg font-semibold">Learn More</a>
+            <a href="#" class="inline-block text-[#005069] hover:underline text-lg font-semibold">Learn More</a>
           </div>
         </div>
-        <div class="text-center p-8 rounded-lg bg-white shadow-lg border border-seafoam/50 transition transform hover:scale-105 hover:shadow-xl flex flex-col">
+        <div class="text-center p-8 rounded-lg bg-gradient-to-br from-white/70 to-sandyBeige/90 backdrop-blur-md shadow-lg border transition transform hover:scale-105 hover:shadow-xl flex flex-col">
           <svg class="h-12 w-12 mx-auto mb-4 text-coral" fill="currentColor" viewBox="0 0 24 24">
             <path d="M20 10h-3V8.86c1.72-.45 3-2 3-3.86h-3V4c0-.55-.45-1-1-1H8c-.55 0-1 .45-1 1v1H4c0 1.86 1.28 3.41 3 3.86V10H4c0 1.86 1.28 3.41 3 3.86V15H4c0 1.86 1.28 3.41 3 3.86V20c0 .55.45 1 1 1h8c.55 0 1-.45 1-1v-1.14c1.72-.45 3-2 3-3.86h-3v-1.14c1.72-.45 3-2 3-3.86zm-5 9H9v-1h6v1zm0-3H9v-1h6v1zm0-3H9v-1h6v1zm0-3H9V7h6v1z"/>
           </svg>
           <h3 class="text-2xl font-semibold text-oceanDeep mb-6">Residential IT Services</h3>
           <p class="text-base text-gray-800 leading-relaxed mb-4 min-h-[100px]">
-            Residential IT house calls for seniors, offering user training and technical support to regain email access, fix peripherals, back up photos, and more.
+            Residential IT house calls in the Grand Strand, offering user training and technical support to set up new devices, fix peripherals, back up photos, and more.
           </p>
           <div class="mt-auto">
-            <a href="#" class="inline-block text-seafoam hover:underline text-lg font-semibold">Learn More</a>
+            <a href="#" class="inline-block text-[#005069] hover:underline text-lg font-semibold">Learn More</a>
           </div>
         </div>
       </div>
@@ -78,19 +76,19 @@ import MainLayout from '../layouts/MainLayout.astro';
     <!-- Why Choose Us Content -->
     <div class="py-8">
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-16 text-center text-shadow">Why Choose Us?</h2>
+        <h2 class="text-4xl md:text-5xl pt-20 font-extrabold text-white mb-16 text-center text-shadow">Why Choose Us?</h2>
         <ul class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-          <li class="flex items-start p-8 rounded-lg bg-white shadow-md border border-sandyBeige/20 transition transform hover:scale-105 hover:shadow-lg">
+          <li class="flex items-center p-8 rounded-lg bg-gradient-to-br from-white/70 to-sandyBeige/90 backdrop-blur-md shadow-md border border-sandyBeige/20 transition transform hover:scale-105 hover:shadow-lg">
             <span class="inline-block w-10 h-10 flex items-center justify-center text-4xl text-coral/80 mr-4 leading-none">✔</span>
-            <span class="text-lg text-gray-800 leading-relaxed">Affordable solutions tailored for small businesses</span>
+            <span class="text-lg text-gray-800 leading-relaxed">Affordable solutions tailored for small businesses and individuals</span>
           </li>
-          <li class="flex items-start p-8 rounded-lg bg-white shadow-md border border-sandyBeige/20 transition transform hover:scale-105 hover:shadow-lg">
+          <li class="flex items-center p-8 rounded-lg bg-gradient-to-br from-white/70 to-sandyBeige/90 backdrop-blur-md shadow-md border border-sandyBeige/20 transition transform hover:scale-105 hover:shadow-lg">
             <span class="inline-block w-10 h-10 flex items-center justify-center text-4xl text-coral/80 mr-4 leading-none">✔</span>
             <span class="text-lg text-gray-800 leading-relaxed">Reliable and responsive support you can trust</span>
           </li>
-          <li class="flex items-start p-8 rounded-lg bg-white shadow-md border border-sandyBeige/20 transition transform hover:scale-105 hover:shadow-lg">
+          <li class="flex items-center p-8 rounded-lg bg-gradient-to-br from-white/70 to-sandyBeige/90 backdrop-blur-md shadow-md border border-sandyBeige/20 transition transform hover:scale-105 hover:shadow-lg">
             <span class="inline-block w-10 h-10 flex items-center justify-center text-4xl text-coral/80 mr-4 leading-none">✔</span>
-            <span class="text-lg text-gray-800 leading-relaxed">Personalized tech support tailored for seniors on the Carolina Coast</span>
+            <span class="text-lg text-gray-800 leading-relaxed">Personalized tech support tailored for house calls in the Grand Strand area of SC</span>
           </li>
         </ul>
       </div>
@@ -99,9 +97,9 @@ import MainLayout from '../layouts/MainLayout.astro';
     <!-- Portfolio Content -->
     <div class="py-8">
       <div class="container mx-auto px-4">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-16 text-center text-shadow">Our Work</h2>
+        <h2 class="text-4xl md:text-5xl pt-20 font-extrabold text-white mb-16 text-center text-shadow">Our Work</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:-translate-y-3 hover:shadow-2xl flex flex-col border border-sandyBeige/20 group">
+          <div class="bg-gradient-to-br from-white/70 to-sandyBeige/90 backdrop-blur-md rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:-translate-y-3 hover:shadow-2xl flex flex-col border border-sandyBeige/20 group">
             <div class="p-2 overflow-hidden">
               <img src="/images/laptop-mockup.png" alt="Custom Website Design for Local Bakery - Carolina Coast IT" class="w-full h-auto max-h-64 object-contain rounded-none transition-transform duration-300 group-hover:scale-110" loading="lazy" />
             </div>
@@ -109,12 +107,12 @@ import MainLayout from '../layouts/MainLayout.astro';
               <h3 class="text-xl font-semibold text-oceanDeep mb-2">Local Bakery Site</h3>
               <p class="text-base text-gray-800 mb-2 leading-relaxed min-h-[80px]">A responsive website for a local bakery to showcase their menu. <span class="text-coral">(Coming Soon)</span></p>
               <div class="mt-auto flex justify-between items-center">
-                <a href="#" class="inline-block bg-coral text-white px-4 py-2 rounded-lg font-semibold hover:bg-seafoam transition">Visit Website</a>
-                <a href="#" class="inline-block text-seafoam hover:underline text-base font-semibold">Learn More</a>
+                <a href="#" class="inline-block bg-[#005069] text-white font-bold px-4 py-2 rounded-lg hover:bg-[#006f8a] transition">Visit Website</a>
+                <a href="#" class="inline-block text-white font-bold hover:underline text-base">Learn More</a>
               </div>
             </div>
           </div>
-          <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:-translate-y-3 hover:shadow-2xl flex flex-col border border-sandyBeige/20 group">
+          <div class="bg-gradient-to-br from-white/70 to-sandyBeige/90 backdrop-blur-md rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:-translate-y-3 hover:shadow-2xl flex flex-col border border-sandyBeige/20 group">
             <div class="p-2 overflow-hidden">
               <img src="/images/laptop-mockup.png" alt="Custom Website Design for Coastal Realty - Carolina Coast IT" class="w-full h-auto max-h-64 object-contain rounded-none transition-transform duration-300 group-hover:scale-110" loading="lazy" />
             </div>
@@ -122,12 +120,12 @@ import MainLayout from '../layouts/MainLayout.astro';
               <h3 class="text-xl font-semibold text-oceanDeep mb-2">Coastal Realty</h3>
               <p class="text-base text-gray-800 mb-2 leading-relaxed min-h-[80px]">A site for a real estate agency to list properties along the coast. <span class="text-coral">(Coming Soon)</span></p>
               <div class="mt-auto flex justify-between items-center">
-                <a href="#" class="inline-block bg-coral text-white px-4 py-2 rounded-lg font-semibold hover:bg-seafoam transition">Visit Website</a>
-                <a href="#" class="inline-block text-seafoam hover:underline text-base font-semibold">Learn More</a>
+                <a href="#" class="inline-block bg-[#005069] text-white font-bold px-4 py-2 rounded-lg hover:bg-[#006f8a] transition">Visit Website</a>
+                <a href="#" class="inline-block text-white font-bold hover:underline text-base">Learn More</a>
               </div>
             </div>
           </div>
-          <div class="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:-translate-y-3 hover:shadow-2xl flex flex-col border border-sandyBeige/20 group">
+          <div class="bg-gradient-to-br from-white/70 to-sandyBeige/90 backdrop-blur-md rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:-translate-y-3 hover:shadow-2xl flex flex-col border border-sandyBeige/20 group">
             <div class="p-2 overflow-hidden">
               <img src="/images/laptop-mockup.png" alt="Custom Website Design for Tech Consultant - Carolina Coast IT" class="w-full h-auto max-h-64 object-contain rounded-none transition-transform duration-300 group-hover:scale-110" loading="lazy" />
             </div>
@@ -135,8 +133,8 @@ import MainLayout from '../layouts/MainLayout.astro';
               <h3 class="text-xl font-semibold text-oceanDeep mb-2">Tech Consultant</h3>
               <p class="text-base text-gray-800 mb-2 leading-relaxed min-h-[80px]">A professional site for a local tech consultant. <span class="text-coral">(Coming Soon)</span></p>
               <div class="mt-auto flex justify-between items-center">
-                <a href="#" class="inline-block bg-coral text-white px-4 py-2 rounded-lg font-semibold hover:bg-seafoam transition">Visit Website</a>
-                <a href="#" class="inline-block text-seafoam hover:underline text-base font-semibold">Learn More</a>
+                <a href="#" class="inline-block bg-[#005069] text-white font-bold px-4 py-2 rounded-lg hover:bg-[#006f8a] transition">Visit Website</a>
+                <a href="#" class="inline-block text-white font-bold hover:underline text-base">Learn More</a>
               </div>
             </div>
           </div>

@@ -1,36 +1,35 @@
 ---
+// MainLayout.astro
 const { title } = Astro.props;
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-
-const metaDescription = "Carolina Coast IT offers professional web design and IT services for small businesses and residents. Specializing in custom websites, SEO, and senior tech support in the Carolina Coast area.";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content={metaDescription}>
-  <title>{title}</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
-</head>
-<body>
-  <!-- Fixed Video Background -->
-  <div class="video-container">
-    <video autoplay muted loop playsinline class="video-bg">
-      <source src="/videos/beach-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-  </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Carolina Coast IT offers professional web design and IT services." />
+    <title>{title}</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" />
+  </head>
+  <body class="m-0 p-0 h-screen w-screen overflow-hidden relative">
+    <!-- Fixed background video -->
+    <div class="fixed top-0 left-0 w-full h-full z-[-1]">
+      <video autoplay muted loop playsinline class="w-full h-full object-cover filter blur-sm">
+        <source src="/videos/beach-video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
-  <!-- Content Wrapper -->
-  <div class="content-wrapper">
-    <Header />
-    <main id="main-content">
-      <slot />
-    </main>
-    <Footer />
-  </div>
-</body>
+    <!-- Content Layer (above video) -->
+    <div class="relative z-50 h-full flex flex-col">
+      <Header />
+      <main class="flex-1 overflow-y-auto">
+        <slot />
+        <Footer />
+      </main>
+    </div>
+  </body>
 </html>

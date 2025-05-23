@@ -4,33 +4,42 @@
 
 html, body {
   height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden; /* Explicitly prevent body scrolling */
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
 }
 
+/* Ensure body doesn't interfere with fixed positioning */
 body {
+  @apply font-['Inter'] text-gray-800 min-h-screen;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  @apply text-gray-800 min-h-screen;
+  position: relative; /* Establish stacking context */
 }
 
-/* Video Container */
-.video-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: 0; /* Base layer */
-  will-change: transform; /* Hint to browser for better rendering */
+/* Video Background */
+.video-background {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100vh !important;
+  max-height: 100vh !important;
+  z-index: -1; /* Base layer */
+  will-change: transform; /* Optimize rendering */
+  -webkit-backface-visibility: hidden; /* Prevent rendering issues */
+  backface-visibility: hidden;
+  transform: translateZ(0); /* Force hardware acceleration */
 }
 
 /* Video Styles */
 .video-bg {
   width: 100%;
   height: 100%;
+  max-height: 100vh; /* Constrain video height */
   object-fit: cover;
   filter: blur(5px);
+  display: block; /* Ensure proper rendering */
 }
 
 /* Content Wrapper */
@@ -39,23 +48,12 @@ body {
   z-index: 10; /* Above video */
 }
 
-/* Main Content */
-#main-content {
-  position: relative;
-  z-index: 10; /* Ensure content overlays video */
-}
-
-/* Navbar */
-#header {
-  z-index: 20; /* Above content and video */
-}
-
-/* Text Shadow */
+/* Text Shadow for Better Contrast */
 .text-shadow {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* For readability on video */
 }
 
-/* CTA Button */
+/* CTA Button Animation */
 .cta-button {
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -63,9 +61,4 @@ body {
 .cta-button:hover {
   transform: scale(1.05);
   background-color: #FF6F61;
-}
-
-/* Remove Default Backgrounds */
-div {
-  background: none;
 }
