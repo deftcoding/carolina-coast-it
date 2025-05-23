@@ -1,28 +1,73 @@
 ---
-  import MainLayout from '../layouts/MainLayout.astro';
-  ---
-  <MainLayout title="Contact">
-    <section class="py-16">
-      <div class="container mx-auto px-4">
-        <h1 class="text-3xl font-bold text-primary mb-8 text-center">Contact Us</h1>
-        <div class="max-w-md mx-auto text-center">
-          <p class="text-gray-600 mb-6">
-            Ready to get started? Reach out to discuss your web or IT needs.
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Contact">
+  <section class="pt-48 pb-16">
+    <div class="container mx-auto px-4">
+      <!-- Page Heading -->
+      <div class="w-full max-w-5xl mx-auto mb-12 text-center">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-[#005069] text-shadow mb-6">
+          Let's Connect
+        </h1>
+        <p class="text-xl text-gray-800 text-shadow">
+          Have a website in mind or need some tech support? Reach out and let’s talk about how I can help.
+        </p>
+      </div>
+
+      <!-- Grid Layout -->
+      <div class="w-full max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 bg-white bg-opacity-80 rounded-lg shadow-md p-8">
+        <!-- Contact Info -->
+        <div class="space-y-6">
+          <h2 class="text-3xl font-bold text-[#005069] text-shadow mb-4">Contact Info</h2>
+          <p class="text-lg text-gray-800"><strong>Email:</strong> <a href="mailto:chris@carolinacoastit.com" class="text-[#005069] hover:underline">chris@carolinacoastit.com</a></p>
+          <p class="text-lg text-gray-800"><strong>Phone:</strong> 864-652-4657</p>
+          <p class="text-lg text-gray-800"><strong>Location:</strong> Murrells Inlet, SC</p>
+          <p class="text-lg text-gray-800"><strong>Hours:</strong> Mon–Fri, 9AM – 5PM</p>
+          <p class="text-lg text-gray-800">
+            I personally respond to every inquiry, usually within 24 hours or less.
           </p>
-          <a
-            href="mailto:chris@carolinacoastit.com"
-            class="inline-block bg-secondary text-white px-6 py-3 rounded-lg font-semibold hover:bg-yellow-600 transition"
+        </div>
+
+        <!-- Contact Form -->
+        <div>
+          <form
+            method="POST"
+            action="https://formspree.io/f/manozzkb"
+            class="space-y-6"
           >
-            Email Us
-          </a>
-          <p class="mt-4 text-gray-600">
-            We'll respond promptly to your inquiry at <a href="mailto:chris@carolinacoastit.com" class="text-primary hover:underline">chris@carolinacoastit.com</a>.
+            <div>
+              <label for="name" class="block text-lg font-medium text-gray-800 mb-2">Name</label>
+              <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-seafoam" />
+            </div>
+            <div>
+              <label for="email" class="block text-lg font-medium text-gray-800 mb-2">Email</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-seafoam" />
+            </div>
+            <div>
+              <label for="message" class="block text-lg font-medium text-gray-800 mb-2">Message</label>
+              <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-seafoam"></textarea>
+            </div>
+
+            <!-- reCAPTCHA box -->
+            <div class="pt-2">
+              <div class="g-recaptcha" data-sitekey="6Lei7EYrAAAAAE9EkQ-6Lei7EYrAAAAAE9EkQ-efsgK3RJIndL3gNuUlFhG"></div>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="bg-coral text-white px-8 py-4 rounded-lg font-semibold hover:bg-seafoam transition-all duration-300">
+                Send Message
+              </button>
+            </div>
+          </form>
+          <p class="text-sm text-gray-500 mt-6 text-center">
+            Protected by Google reCAPTCHA to prevent spam.
           </p>
         </div>
       </div>
-    </section>
-    <style>
-      .contact-unique { margin: 0; }
-      .contact-unique-tailwind { background-color: #E76F51; height: 1px; width: 100%; }
-    </style>
-  </MainLayout>
+    </div>
+  </section>
+
+  <!-- reCAPTCHA script -->
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</MainLayout>
