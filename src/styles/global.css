@@ -2,47 +2,70 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Inter font loaded via link tag in MainLayout.astro */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 
 body {
-  @apply font-['Inter'] text-gray-800 min-h-screen;
-  /* Fallback to system font if Inter fails to load */
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  /* Background gradient applied in MainLayout.astro */
+  @apply text-gray-800 min-h-screen;
 }
 
-.shooting-star {
-  position: absolute;
-  width: 12px;
-  height: 12px;
-  background: white;
-  border-radius: 50%;
-  box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.9);
-  animation: shootingStar 4s infinite ease-in-out;
+/* Video Container */
+.video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0; /* Base layer */
+  will-change: transform; /* Hint to browser for better rendering */
 }
 
-.shooting-star.delay-1 {
-  animation-delay: 1.5s;
-  top: 5%;
-  left: 70%;
+/* Video Styles */
+.video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px);
 }
 
-.shooting-star.delay-2 {
-  animation-delay: 3s;
-  top: 15%;
-  left: 30%;
+/* Content Wrapper */
+.content-wrapper {
+  position: relative;
+  z-index: 10; /* Above video */
 }
 
-@keyframes shootingStar {
-  0% {
-    transform: translateX(0) translateY(0);
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.6;
-  }
-  100% {
-    transform: translateX(300px) translateY(300px);
-    opacity: 0;
-  }
+/* Main Content */
+#main-content {
+  position: relative;
+  z-index: 10; /* Ensure content overlays video */
+}
+
+/* Navbar */
+#header {
+  z-index: 20; /* Above content and video */
+}
+
+/* Text Shadow */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* CTA Button */
+.cta-button {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: scale(1.05);
+  background-color: #FF6F61;
+}
+
+/* Remove Default Backgrounds */
+div {
+  background: none;
 }

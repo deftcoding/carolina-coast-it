@@ -6,13 +6,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#1B263B',
-        gradientEnd: '#415A77',
-        secondary: '#2EC4B6',
-        accent: '#F4A261',
-        warmAccent: '#E76F51',
-        darkSecondary: '#1D3557',
-        darkWarmAccent: '#D98A3F',
+        skyBlue: '#A3BFFA',      // Soft sky blue for horizon
+        oceanDeep: '#1B263B',     // Deep ocean blue
+        oceanMid: '#4A6D8A',      // Mid-tone ocean blue
+        sandyBeige: '#F4E1C1',    // Sandy beige for accents
+        coral: '#FF6F61',         // Coral for highlights
+        seafoam: '#2EC4B6',       // Seafoam green for subtle accents
       },
     },
   },
