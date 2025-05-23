@@ -1,29 +1,32 @@
 ---
-  import MainLayout from '../layouts/MainLayout.astro';
-  import ProjectCard from '../components/ProjectCard.astro';
-  ---
-  <MainLayout title="Projects">
-    <section class="py-16">
-      <div class="container mx-auto px-4">
-        <h1 class="text-3xl font-bold text-primary mb-8 text-center">Our Projects</h1>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ProjectCard
-            title="Project Placeholder 1"
-            description="A future case study or demo site will be showcased here."
-          />
-          <ProjectCard
-            title="Project Placeholder 2"
-            description="A future case study or demo site will be showcased here."
-          />
-          <ProjectCard
-            title="Project Placeholder 3"
-            description="A future case study or demo site will be showcased here."
-          />
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Projects">
+  <section class="pt-48 pb-16">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <h1 class="text-5xl md:text-6xl font-extrabold text-[#005069] text-shadow mb-4">Projects</h1>
+        <p class="text-lg text-white text-shadow max-w-2xl mx-auto">
+          A showcase of websites built for future clients. Each project we build is fully responsive and tailored to the needs of small businesses.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-gradient-to-br from-white/70 to-sandyBeige/90 backdrop-blur-md rounded-lg shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:-translate-y-3 hover:shadow-2xl flex flex-col border border-sandyBeige/20 group">
+          <div class="p-2 overflow-hidden">
+            <img src="/images/laptop-mockup.png" alt="Sample Project" class="w-full h-auto max-h-64 object-contain rounded-none transition-transform duration-300 group-hover:scale-110" />
+          </div>
+          <div class="p-4 flex flex-col">
+            <h3 class="text-xl font-semibold text-oceanDeep mb-2">Bakery Website</h3>
+            <p class="text-base text-gray-800 mb-2 leading-relaxed min-h-[80px]">A cozy website design tailored for a local bakery. Responsive, fast, and full of charm.</p>
+            <div class="mt-auto flex justify-between items-center">
+              <a href="#" class="inline-block bg-[#005069] text-white font-bold px-4 py-2 rounded-lg hover:bg-[#006f8a] transition">Visit Site</a>
+              <a href="#" class="inline-block text-white font-bold hover:underline text-base">Learn More</a>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-    <style>
-      .projects-unique { margin: 0; }
-      .projects-unique-tailwind { background-color: #1D3557; height: 1px; width: 100%; }
-    </style>
-  </MainLayout>
+    </div>
+  </section>
+</MainLayout>
